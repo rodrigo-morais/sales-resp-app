@@ -1,24 +1,27 @@
 {
-  "name": "angular-structure",
+  "name": "sales-rep-app",
   "version": "0.1.0",
-  "description": "This project is a simple idea of structure to be followed in a project AngularJS 1.x.",
-  "homepage": "https://github.com/rodrigo-morais/angular-structure",
+  "description": "This project is a software to sales representative to control your customers.",
+  "homepage": "https://github.com/rodrigo-morais/sales-rep-app",
   "main": "./index.html",
   "scripts": {
     "test": "grunt test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rodrigo-morais/angular-structure.git"
+    "url": "https://github.com/rodrigo-morais/sales-rep-app.git"
   },
   "keywords": [
     "AngularJS",
-    "structure"
+    "Angular",
+    "sales",
+    "represntative",
+    "customers"
   ],
   "author": "Rodrigo Morais",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rodrigo-morais/angular-structure/issues"
+    "url": "https://github.com/rodrigo-morais/sales-rep-app/issues"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
