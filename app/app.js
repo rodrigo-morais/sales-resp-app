@@ -48,6 +48,12 @@ app.config([
             controllerUrl: 'home/controllers/homeController',
             controllerAs: 'vm'
         })).
+        when('/details/:id',  angularAMD.route({
+            templateUrl: 'app/detail/templates/detail.html',
+            controller: 'detailController',
+            controllerUrl: 'detail/controllers/detailController',
+            controllerAs: 'vm'
+        })).
         otherwise(angularAMD.route({
             templateUrl: 'app/login/templates/login.html',
             controller: 'loginController',

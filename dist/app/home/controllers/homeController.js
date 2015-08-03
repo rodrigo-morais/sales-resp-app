@@ -14,6 +14,8 @@ define(["exports", "app", "home/services/customersService"], function (exports, 
     var CustomersService = _homeServicesCustomersService.CustomersService;
 
     var HomeController = function HomeController($location, $rootScope, localStorageService, customersService) {
+        var _this2 = this;
+
         _classCallCheck(this, HomeController);
 
         var sessionId = null,
@@ -49,6 +51,10 @@ define(["exports", "app", "home/services/customersService"], function (exports, 
                 _this.customers = list.data;
             });
         });
+
+        this.showDetails = function (id) {
+            _this2._location.path("/details/" + id);
+        };
     };
 
     HomeController.$inject = ["$location", "$rootScope", "localStorageService", "customersService"];

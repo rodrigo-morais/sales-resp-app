@@ -12,7 +12,8 @@ var headerDirective = () => {
         replace: true,
         scope: {
             showUser: '=',
-            showLogoff: '='
+            showLogoff: '=',
+            user: '@'
         },
         controller: headerController,
         link: function (scope, element, attrs, controller) {

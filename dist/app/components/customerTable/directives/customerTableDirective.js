@@ -11,7 +11,8 @@ define(["exports", "module"], function (exports, module) {
             css: "app/components/customerTable/css/customerTable.css",
             replace: true,
             scope: {
-                customers: "="
+                customers: "=",
+                showDetails: "="
             },
             link: function link(scope, element, attrs, controller) {
 

@@ -42,6 +42,10 @@ class HomeController {
                     _this.customers = list.data;
                 });
         });
+
+        this.showDetails = (id) => {
+            this._location.path('/details/' + id);
+        };
     }
 
 }

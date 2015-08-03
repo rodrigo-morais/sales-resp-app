@@ -39,7 +39,10 @@
                 </tr>
             </thead>
             <tbody>
-                <tr data-ng:repeat="customer in customers | orderBy:order:reverse | filter:filterCustomers()">
+                <tr
+                    data-ng:repeat="customer in customers | orderBy:order:reverse | filter:filterCustomers()"
+                    data-ng:click="showDetails(customer.id)"
+                >
                     <td>{{customer.customername}}</td>
                     <td class="id">{{customer.id}}</td>
                     <td>{{customer.productname}}</td>

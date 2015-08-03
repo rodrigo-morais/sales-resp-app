@@ -11,7 +11,7 @@ main
     display: inline-block;
     position: relative;
     float: left;
-    overflow-y: auto;
+    overflow: hidden;
 }
 
 .login
@@ -41,7 +41,8 @@ main
     color: #FFFFFF;
 }
 
-.home
+.home,
+.details
 {
     position: relative;
     float: left;
@@ -50,4 +51,30 @@ main
     height: 100%;
     margin: 0px!important;
     padding: 0!important;
+}
+
+div.customerDetails
+{
+    height: 82%;
+}
+
+
+
+div.panel-customer
+{
+    margin: 1% 0 0 1%;
+}
+
+div.panel-customer span.customer-label
+{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+}
+
+div.panel-customer span.customer-value
+{
+    font-size: 1.2em;
+    text-align: left;
 }

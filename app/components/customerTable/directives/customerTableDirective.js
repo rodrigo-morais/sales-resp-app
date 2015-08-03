@@ -9,7 +9,8 @@
         css: 'app/components/customerTable/css/customerTable.css',
         replace: true,
         scope: {
-            customers: '='
+            customers: '=',
+            showDetails: '='
         },
         link: function (scope, element, attrs, controller) {
             
