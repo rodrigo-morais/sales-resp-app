@@ -19,8 +19,6 @@ define(["exports", "app", "login/services/loginService", "../../config"], functi
 
     var LoginController = (function () {
         function LoginController($location, $rootScope, $crypto, loginService, localStorageService) {
-            var _this = this;
-
             _classCallCheck(this, LoginController);
 
             this._service = loginService;
@@ -34,13 +32,6 @@ define(["exports", "app", "login/services/loginService", "../../config"], functi
 
             this._rootScope.logged = false;
             this._rootScope.userName = "";
-
-            this._rootScope.logoff = function () {
-                if (_this._localStorageService.isSupported) {
-                    _this._localStorageService.remove("userName", "sessionId");
-                    _this._location.path("/");
-                }
-            };
 
             if (this._localStorageService.isSupported) {
                 if (this._localStorageService.get("sessionId") !== null) {

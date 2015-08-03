@@ -14,6 +14,7 @@
         link: function (scope, element, attrs, controller) {
             
             scope.filterField = 'customername';
+            scope.filterValue = '';
 
             scope.filterCustomers = () => {
                 switch (scope.filterField) {

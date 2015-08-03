@@ -24,6 +24,9 @@ class HomeController {
                     _this.customers = list.data;
                 });
         }
+        else{
+            this._location.path('/');
+        }
     }
 
 }

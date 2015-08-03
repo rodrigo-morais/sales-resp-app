@@ -11,7 +11,8 @@ var headerDirective = () => {
         css: 'app/components/header/css/header.css',
         replace: true,
         scope: {
-            showUser: '='
+            showUser: '=',
+            showLogoff: '='
         },
         controller: headerController,
         link: function (scope, element, attrs, controller) {

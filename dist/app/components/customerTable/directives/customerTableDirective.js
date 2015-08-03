@@ -16,6 +16,7 @@ define(["exports", "module"], function (exports, module) {
             link: function link(scope, element, attrs, controller) {
 
                 scope.filterField = "customername";
+                scope.filterValue = "";
 
                 scope.filterCustomers = function () {
                     switch (scope.filterField) {

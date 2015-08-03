@@ -33,6 +33,8 @@ define(["exports", "app", "home/services/customersService"], function (exports, 
             customersService.post(sessionId).then(function (list) {
                 _this.customers = list.data;
             });
+        } else {
+            this._location.path("/");
         }
     };
 

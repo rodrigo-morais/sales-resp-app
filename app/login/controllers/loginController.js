@@ -16,13 +16,6 @@ class LoginController {
         this._rootScope.logged = false;
         this._rootScope.userName = '';
 
-        this._rootScope.logoff = () => {
-            if(this._localStorageService.isSupported) {
-                this._localStorageService.remove('userName', 'sessionId');
-                this._location.path('/');
-            }
-        };
-
         if(this._localStorageService.isSupported) {
             if(this._localStorageService.get('sessionId') !== null){
                 this._rootScope.userName = this._localStorageService.get('userName');

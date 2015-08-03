@@ -15,7 +15,8 @@ define(["exports", "module", "components/header/controllers/headerController"], 
             css: "app/components/header/css/header.css",
             replace: true,
             scope: {
-                showUser: "="
+                showUser: "=",
+                showLogoff: "="
             },
             controller: headerController,
             link: function link(scope, element, attrs, controller) {}
