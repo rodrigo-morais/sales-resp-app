@@ -1,28 +1,37 @@
 ﻿import app from 'app';
-import { SalesService } from "home/services/salesService";
+import { CustomersService } from "home/services/customersService";
+
 
 class HomeController {
-    constructor($location, $rootScope, localStorageService){
-        let sessionId = null;
+    constructor($location, $rootScope, localStorageService, customersService){
+        let sessionId = null,
+            _this = this;
 
         this._location = $location;
         this._localStorageService = localStorageService;
         this._rootScope = $rootScope;
 
+        this.customers = [];
+
         if(this._localStorageService.isSupported) {
-            if(this._localStorageService.get('sessionId') === null){
-                this._rootScope.logged = false;
-                this._rootScope.menus = [];
-                this._location.path('/');
-            }
+            sessionId = this._localStorageService.get('sessionId');
+        }
+
+        if(sessionId !== null){
+            customersService
+                .post(sessionId)
+                .then(function(list){
+                    _this.customers = list.data;
+                });
         }
     }
 
 }
 
-HomeController.$inject = ['$location', '$rootScope', 'localStorageService'];
+HomeController.$inject = ['$location', '$rootScope', 'localStorageService', 'customersService'];
 
 app
-    .controller('homeController', HomeController);
+    .controller('homeController', HomeController)
+    .service('customersService', CustomersService);
 
 export { HomeController };

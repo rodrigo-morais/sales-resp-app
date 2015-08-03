@@ -1,4 +1,4 @@
-define(["exports", "app", "home/services/salesService"], function (exports, _app, _homeServicesSalesService) {
+define(["exports", "app", "home/services/customersService"], function (exports, _app, _homeServicesCustomersService) {
     "use strict";
 
     var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
@@ -11,34 +11,34 @@ define(["exports", "app", "home/services/salesService"], function (exports, _app
 
     var app = _interopRequire(_app);
 
-    var SalesService = _homeServicesSalesService.SalesService;
+    var CustomersService = _homeServicesCustomersService.CustomersService;
 
-    var HomeController = function HomeController($location, $rootScope, localStorageService) {
+    var HomeController = function HomeController($location, $rootScope, localStorageService, customersService) {
         _classCallCheck(this, HomeController);
 
-        var sessionId = null;
+        var sessionId = null,
+            _this = this;
 
         this._location = $location;
         this._localStorageService = localStorageService;
         this._rootScope = $rootScope;
 
+        this.customers = [];
+
         if (this._localStorageService.isSupported) {
-            if (this._localStorageService.get("sessionId") === null) {
-                this._rootScope.logged = false;
-                this._rootScope.menus = [];
-                this._location.path("/");
-            } else {
-                this.userName = this._localStorageService.get("userName");
-                sessionId = this._localStorageService.get("sessionId");
-                this._rootScope.userName = this.userName;
-                this._rootScope.logged = true;
-            }
+            sessionId = this._localStorageService.get("sessionId");
+        }
+
+        if (sessionId !== null) {
+            customersService.post(sessionId).then(function (list) {
+                _this.customers = list.data;
+            });
         }
     };
 
-    HomeController.$inject = ["$location", "$rootScope", "localStorageService"];
+    HomeController.$inject = ["$location", "$rootScope", "localStorageService", "customersService"];
 
-    app.controller("homeController", HomeController);
+    app.controller("homeController", HomeController).service("customersService", CustomersService);
 
     exports.HomeController = HomeController;
 });
