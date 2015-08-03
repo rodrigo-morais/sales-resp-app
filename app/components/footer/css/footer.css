@@ -1,0 +1,37 @@
+footer
+{
+    background-color: #000000;
+    color: #FFFFFF;
+    bottom: 0;
+    height: 5%;
+    position: absolute;
+    width: 100%;
+    clear: both;
+    margin: 0px!important;
+}
+
+footer span
+{
+    margin-top: 0.5%;
+}
+
+footer .title
+{
+    float: left;
+    font-size: 16px;
+    margin-left: 2%;
+}
+
+footer .link
+{
+    float: right;
+    font-size: 12px;
+    text-decoration: underline;
+    margin-right: 2%;
+    cursor: pointer;
+}
+
+.modal-title, .modal-body
+{
+    color: #000000;
+}

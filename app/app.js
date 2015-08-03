@@ -10,6 +10,7 @@ import angularCss from 'angularCSS';
 import ngResource from 'angular-resource';
 import bootstrap from 'bootstrap';
 import headerDirective from "components/header/directives/headerDirective";
+import footerDirective from "components/footer/directives/footerDirective";
 
 let app = angular.module('myApp', ['ngRoute', 'ngResource', 'door3.css', 'LocalStorageModule', 'mdo-angular-cryptography']);
 
@@ -57,6 +58,7 @@ app.config([
 ]);
 
 app
-    .directive('headerPage', [headerDirective]);
+    .directive('headerPage', [headerDirective])
+    .directive('footerPage', [footerDirective]);
 
 return angularAMD.bootstrap(app);

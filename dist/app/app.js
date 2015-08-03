@@ -1,4 +1,4 @@
-define(["exports", "angular", "angular-route", "angularAMD", "angular-local-storage", "aes", "angular-crypto", "angularCSS", "angular-resource", "bootstrap", "components/header/directives/headerDirective"], function (exports, _angular, _angularRoute, _angularAMD, _angularLocalStorage, _aes, _angularCrypto, _angularCSS, _angularResource, _bootstrap, _componentsHeaderDirectivesHeaderDirective) {
+define(["exports", "angular", "angular-route", "angularAMD", "angular-local-storage", "aes", "angular-crypto", "angularCSS", "angular-resource", "bootstrap", "components/header/directives/headerDirective", "components/footer/directives/footerDirective"], function (exports, _angular, _angularRoute, _angularAMD, _angularLocalStorage, _aes, _angularCrypto, _angularCSS, _angularResource, _bootstrap, _componentsHeaderDirectivesHeaderDirective, _componentsFooterDirectivesFooterDirective) {
     "use strict";
 
     var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
@@ -22,6 +22,8 @@ define(["exports", "angular", "angular-route", "angularAMD", "angular-local-stor
     var bootstrap = _interopRequire(_bootstrap);
 
     var headerDirective = _interopRequire(_componentsHeaderDirectivesHeaderDirective);
+
+    var footerDirective = _interopRequire(_componentsFooterDirectivesFooterDirective);
 
     var app = angular.module("myApp", ["ngRoute", "ngResource", "door3.css", "LocalStorageModule", "mdo-angular-cryptography"]);
 
@@ -57,7 +59,7 @@ define(["exports", "angular", "angular-route", "angularAMD", "angular-local-stor
         }));
     }]);
 
-    app.directive("headerPage", [headerDirective]);
+    app.directive("headerPage", [headerDirective]).directive("footerPage", [footerDirective]);
 
     return angularAMD.bootstrap(app);
 });
