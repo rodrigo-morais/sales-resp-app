@@ -1,4 +1,4 @@
-define(["exports", "angular", "angular-route", "angularAMD", "angularCSS", "angular-resource", "bootstrap"], function (exports, _angular, _angularRoute, _angularAMD, _angularCSS, _angularResource, _bootstrap) {
+define(["exports", "angular", "angular-route", "angularAMD", "angular-local-storage", "aes", "angular-crypto", "angularCSS", "angular-resource", "bootstrap"], function (exports, _angular, _angularRoute, _angularAMD, _angularLocalStorage, _aes, _angularCrypto, _angularCSS, _angularResource, _bootstrap) {
     "use strict";
 
     var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
@@ -9,16 +9,40 @@ define(["exports", "angular", "angular-route", "angularAMD", "angularCSS", "angu
 
     var angularAMD = _interopRequire(_angularAMD);
 
+    var LocalStorageModule = _interopRequire(_angularLocalStorage);
+
+    var aes = _interopRequire(_aes);
+
+    var angularCrypto = _interopRequire(_angularCrypto);
+
     var angularCss = _interopRequire(_angularCSS);
 
     var ngResource = _interopRequire(_angularResource);
 
     var bootstrap = _interopRequire(_bootstrap);
 
-    var app = angular.module("myApp", ["ngRoute", "ngResource", "door3.css", "LocalStorageModule", "angularCharts"]);
+    var app = angular.module("myApp", ["ngRoute", "ngResource", "door3.css", "LocalStorageModule", "mdo-angular-cryptography"]);
+
+    app.config(["$httpProvider", function ($httpProvider) {
+        $httpProvider.defaults.useXDomain = true;
+        delete $httpProvider.defaults.headers.common["X-Requested-With"];
+    }]);
+
+    app.config(function (localStorageServiceProvider) {
+        localStorageServiceProvider.setPrefix("myApp").setStorageType("sessionStorage").setNotify(false, false);
+    });
+
+    app.config(["$cryptoProvider", function ($cryptoProvider) {
+        $cryptoProvider.setCryptographyKey("crossover");
+    }]);
 
     app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $locationProvider) {
-        $routeProvider.when("/home", angularAMD.route({
+        $routeProvider.when("/", angularAMD.route({
+            templateUrl: "app/login/templates/login.html",
+            controller: "loginController",
+            controllerUrl: "login/controllers/loginController",
+            controllerAs: "vm"
+        })).when("/home", angularAMD.route({
             templateUrl: "app/home/templates/home.html",
             controller: "homeController",
             controllerUrl: "home/controllers/homeController",

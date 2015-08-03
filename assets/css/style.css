@@ -13,3 +13,30 @@ main
     float: left;
     overflow-y: auto;
 }
+
+.login
+{
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    margin-top: -50px;
+    margin-left: -50px;
+    background-color: #000000;
+    color: #FFFFFF;
+    width: 40%;
+    height: 50%;
+    border-radius: 25px;
+    padding: 2%;
+}
+
+.login button
+{
+    width: 100%;
+    padding: 2%;
+    margin: 3% 0;
+}
+
+.login legend
+{
+    color: #FFFFFF;
+}

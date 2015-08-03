@@ -9,7 +9,11 @@ requirejs.config({
         'angular-resource': '../vendor/angular-resource/angular-resource',
         'angular-route': '../vendor/angular-route/angular-route',
         'angularAMD': '../vendor/angularAMD/angularAMD',
-        'angularCSS': '../vendor/angular-css/angular-css'
+        'angular-local-storage': '../vendor/angular-local-storage/dist/angular-local-storage.min',
+        'angularCSS': '../vendor/angular-css/angular-css',
+        'bootstrap': '../vendor/bootstrap/dist/js/bootstrap.min',
+        'aes': '../vendor/cryptojslib/rollups/aes',
+        'angular-crypto': '../vendor/angular-cryptography/mdo-angular-cryptography'
     },
     "shim": {
         'angular': {
@@ -24,11 +28,16 @@ requirejs.config({
             exports: "angular-resource",
             deps: ["angular"]
         },
+        'angular-local-storage': {
+            exports: "angular-local-storage",
+            deps: ["angular"]
+        },
         'angularCSS': {
             exports: "angularCSS",
             deps: ["angular"]
         },
         'angularAMD': ['angular'],
+        'angular-crypto': ['angular'],
         'bootstrap':
         {
             deps: ["jquery"]

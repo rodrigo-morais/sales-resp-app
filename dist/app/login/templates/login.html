@@ -1,0 +1,16 @@
+﻿<form class="login">
+    <fieldset>
+        <legend>Sales Representative - Login</legend>
+        <div class="form-group">
+            <label for="user-name" class="control-label">User:</label>
+            <input type="text" class="form-control" id="user-name" data-ng:model="vm.userName">
+        </div>
+        <div class="form-group">
+            <label for="password" class="control-label">Password:</label>
+            <input type="password" class="form-control" id="password" data-ng:model="vm.password">
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-primary" data-ng:click="vm.login()">Login</button>
+        </div>
+    </fieldset>
+</form>

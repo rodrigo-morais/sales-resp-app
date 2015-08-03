@@ -24,6 +24,7 @@
     "url": "https://github.com/rodrigo-morais/sales-rep-app/issues"
   },
   "devDependencies": {
+    "angular-mocks": "^1.4.3",
     "grunt": "~0.4.5",
     "grunt-babel": "^4.0.0",
     "grunt-cli": "~0.1.13",

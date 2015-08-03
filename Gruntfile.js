@@ -78,7 +78,7 @@ module.exports = function (grunt) {
             background: true,
             singleRun: false,
             files: [
-              { src: ['test/unit/**/*.js'], served: true }
+              { src: ['tests/unit/**/*.js'], served: true }
             ]
           }
         },
