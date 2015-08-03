@@ -10,7 +10,26 @@ define(["exports", "module"], function (exports, module) {
             templateUrl: html,
             css: "app/components/customerTable/css/customerTable.css",
             replace: true,
-            link: function link(scope, element, attrs, controller) {}
+            scope: {
+                customers: "="
+            },
+            link: function link(scope, element, attrs, controller) {
+
+                scope.filterField = "customername";
+
+                scope.filterCustomers = function () {
+                    switch (scope.filterField) {
+                        case "customername":
+                            return { customername: scope.filterValue };
+                        case "id":
+                            return { id: scope.filterValue };
+                        case "productname":
+                            return { productname: scope.filterValue };
+                        case "status":
+                            return { status: scope.filterValue };
+                    }
+                };
+            }
         };
     };
 

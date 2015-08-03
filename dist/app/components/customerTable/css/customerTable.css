@@ -1,6 +1,19 @@
+.customerTable form
+{
+    margin: 2% 0 0 10%;
+    border: solid 1px #000000;
+    padding: 1%;
+    border-radius: 5px;
+}
+
+.customerTable form input[type="text"]
+{
+    width: 80%;
+}
+
 div.customer
 {
-    height: 74.1%;
+    height: 60.9%;
     overflow-y: scroll;
     margin: 2% 0 2% 10%;
 }
