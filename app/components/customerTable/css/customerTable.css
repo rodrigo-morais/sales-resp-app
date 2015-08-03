@@ -1,0 +1,34 @@
+div.customer
+{
+    height: 74.1%;
+    overflow-y: scroll;
+    margin: 2% 0 2% 10%;
+}
+
+div.customer table thead
+{
+    border: solid 2px #ddd;
+    padding: 1%;
+}
+
+div.customer table td,
+div.customer table th
+{
+    padding-left: 1%;
+    line-height: 1.2em;
+}
+
+div.customer table th
+{
+    cursor: pointer;
+}
+
+div.customer table tbody tr
+{
+    cursor: pointer;
+}
+
+div.customer table td.id
+{
+    text-align: center;
+}

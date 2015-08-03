@@ -1,4 +1,4 @@
-define(["exports", "angular", "angular-route", "angularAMD", "angular-local-storage", "aes", "angular-crypto", "angularCSS", "angular-resource", "bootstrap", "components/header/directives/headerDirective", "components/footer/directives/footerDirective"], function (exports, _angular, _angularRoute, _angularAMD, _angularLocalStorage, _aes, _angularCrypto, _angularCSS, _angularResource, _bootstrap, _componentsHeaderDirectivesHeaderDirective, _componentsFooterDirectivesFooterDirective) {
+define(["exports", "angular", "angular-route", "angularAMD", "angular-local-storage", "aes", "angular-crypto", "angularCSS", "angular-resource", "bootstrap", "components/header/directives/headerDirective", "components/footer/directives/footerDirective", "components/customerTable/directives/customerTableDirective"], function (exports, _angular, _angularRoute, _angularAMD, _angularLocalStorage, _aes, _angularCrypto, _angularCSS, _angularResource, _bootstrap, _componentsHeaderDirectivesHeaderDirective, _componentsFooterDirectivesFooterDirective, _componentsCustomerTableDirectivesCustomerTableDirective) {
     "use strict";
 
     var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
@@ -24,6 +24,8 @@ define(["exports", "angular", "angular-route", "angularAMD", "angular-local-stor
     var headerDirective = _interopRequire(_componentsHeaderDirectivesHeaderDirective);
 
     var footerDirective = _interopRequire(_componentsFooterDirectivesFooterDirective);
+
+    var customerTableDirective = _interopRequire(_componentsCustomerTableDirectivesCustomerTableDirective);
 
     var app = angular.module("myApp", ["ngRoute", "ngResource", "door3.css", "LocalStorageModule", "mdo-angular-cryptography"]);
 
@@ -59,7 +61,7 @@ define(["exports", "angular", "angular-route", "angularAMD", "angular-local-stor
         }));
     }]);
 
-    app.directive("headerPage", [headerDirective]).directive("footerPage", [footerDirective]);
+    app.directive("headerPage", [headerDirective]).directive("footerPage", [footerDirective]).directive("customerTable", [customerTableDirective]);
 
     return angularAMD.bootstrap(app);
 });
