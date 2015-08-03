@@ -10,6 +10,10 @@ define(["exports", "module"], function (exports, module) {
             templateUrl: html,
             css: "app/components/footer/css/footer.css",
             replace: true,
+            scope: {
+                buttons: "=",
+                actions: "="
+            },
             link: function link(scope, element, attrs, controller) {}
         };
     };

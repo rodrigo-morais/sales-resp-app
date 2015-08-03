@@ -35,3 +35,14 @@ footer .link
 {
     color: #000000;
 }
+
+footer form
+{
+    text-align: right;
+}
+
+footer form button
+{
+    width: 5%;
+    margin: 0.7% 1% 0;
+}

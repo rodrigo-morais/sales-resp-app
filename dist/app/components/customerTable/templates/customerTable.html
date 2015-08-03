@@ -16,14 +16,30 @@
         <table class="col-md-12 table table-striped header-fixed">
             <thead>
                 <tr>
-                    <th>Customer Name</th>
-                    <th>Customer ID</th>
-                    <th>Product Name</th>
-                    <th>Status</th>
+                    <th>
+                        Customer Name
+                        <i class="glyphicon glyphicon-upload" data-ng:if="order === 'customername' && reverse"></i>
+                        <i class="glyphicon glyphicon-download" data-ng:if="order === 'customername' && !reverse"></i>
+                        </th>
+                    <th>
+                        Customer ID
+                        <i class="glyphicon glyphicon-upload" data-ng:if="order === 'id' && reverse"></i>
+                        <i class="glyphicon glyphicon-download" data-ng:if="order === 'id' && !reverse"></i>
+                    </th>
+                    <th>
+                        Product Name
+                        <i class="glyphicon glyphicon-upload" data-ng:if="order === 'productname' && reverse"></i>
+                        <i class="glyphicon glyphicon-download" data-ng:if="order === 'productname' && !reverse"></i>
+                    </th>
+                    <th>
+                        Status
+                        <i class="glyphicon glyphicon-upload" data-ng:if="order === 'status' && reverse"></i>
+                        <i class="glyphicon glyphicon-download" data-ng:if="order === 'status' && !reverse"></i>
+                    </th>
                 </tr>
             </thead>
             <tbody>
-                <tr data-ng:repeat="customer in customers | filter:filterCustomers()">
+                <tr data-ng:repeat="customer in customers | orderBy:order:reverse | filter:filterCustomers()">
                     <td>{{customer.customername}}</td>
                     <td class="id">{{customer.id}}</td>
                     <td>{{customer.productname}}</td>

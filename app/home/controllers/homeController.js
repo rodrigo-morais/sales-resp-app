@@ -12,6 +12,8 @@ class HomeController {
         this._rootScope = $rootScope;
 
         this.customers = [];
+        this.buttons = ['sort', 'refresh'];
+        this.actions = [];
 
         if(this._localStorageService.isSupported) {
             sessionId = this._localStorageService.get('sessionId');
@@ -27,6 +29,19 @@ class HomeController {
         else{
             this._location.path('/');
         }
+
+        this.actions.push(() => {
+            $rootScope.$broadcast('sort-customer-table');
+        });
+
+        this.actions.push(() => {
+            customersService
+                .post(sessionId)
+                .then(function(list){
+                    $rootScope.$broadcast('refresh-customer-table');
+                    _this.customers = list.data;
+                });
+        });
     }
 
 }

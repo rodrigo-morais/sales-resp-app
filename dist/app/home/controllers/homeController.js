@@ -24,6 +24,8 @@ define(["exports", "app", "home/services/customersService"], function (exports, 
         this._rootScope = $rootScope;
 
         this.customers = [];
+        this.buttons = ["sort", "refresh"];
+        this.actions = [];
 
         if (this._localStorageService.isSupported) {
             sessionId = this._localStorageService.get("sessionId");
@@ -36,6 +38,17 @@ define(["exports", "app", "home/services/customersService"], function (exports, 
         } else {
             this._location.path("/");
         }
+
+        this.actions.push(function () {
+            $rootScope.$broadcast("sort-customer-table");
+        });
+
+        this.actions.push(function () {
+            customersService.post(sessionId).then(function (list) {
+                $rootScope.$broadcast("refresh-customer-table");
+                _this.customers = list.data;
+            });
+        });
     };
 
     HomeController.$inject = ["$location", "$rootScope", "localStorageService", "customersService"];

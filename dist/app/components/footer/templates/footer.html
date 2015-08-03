@@ -1,2 +1,9 @@
 ﻿<footer class="row col-md-12">
+    <form>
+        <fieldset>
+            <div class="form-group">
+                <button type="button" class="btn btn-default" data-ng:repeat="button in buttons" data-ng:click="actions[$index]()">{{button}}</button>
+            </div>
+        </fieldset>
+    </form>
 </footer>

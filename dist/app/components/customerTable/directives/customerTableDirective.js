@@ -17,6 +17,8 @@ define(["exports", "module"], function (exports, module) {
 
                 scope.filterField = "customername";
                 scope.filterValue = "";
+                scope.order = "";
+                scope.reverse = true;
 
                 scope.filterCustomers = function () {
                     switch (scope.filterField) {
@@ -30,6 +32,18 @@ define(["exports", "module"], function (exports, module) {
                             return { status: scope.filterValue };
                     }
                 };
+
+                scope.$on("refresh-customer-table", function () {
+                    scope.filterField = "customername";
+                    scope.filterValue = "";
+                    scope.order = "";
+                    scope.reverse = true;
+                });
+
+                scope.$on("sort-customer-table", function () {
+                    scope.order = scope.filterField;
+                    scope.reverse = !scope.reverse;
+                });
             }
         };
     };
