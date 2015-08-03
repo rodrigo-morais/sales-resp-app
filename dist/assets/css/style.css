@@ -7,7 +7,7 @@ body
 main
 {
     width: 100%;
-    height: 95%;
+    height: 100%;
     display: inline-block;
     position: relative;
     float: left;
@@ -39,4 +39,15 @@ main
 .login legend
 {
     color: #FFFFFF;
+}
+
+.home
+{
+    position: relative;
+    float: left;
+    clear: both;
+    width: 100%;
+    height: 100%;
+    margin: 0px!important;
+    padding: 0!important;
 }

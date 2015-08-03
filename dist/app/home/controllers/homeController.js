@@ -13,26 +13,14 @@ define(["exports", "app", "home/services/salesService"], function (exports, _app
 
     var SalesService = _homeServicesSalesService.SalesService;
 
-    var HomeController = function HomeController($location, $rootScope, localStorageService, salesService) {
-        var _this = this;
-
+    var HomeController = function HomeController($location, $rootScope, localStorageService) {
         _classCallCheck(this, HomeController);
 
         var sessionId = null;
 
         this._location = $location;
         this._localStorageService = localStorageService;
-        this._service = salesService;
         this._rootScope = $rootScope;
-
-        if (!this._rootScope.logoff) {
-            this._rootScope.logoff = function () {
-                if (_this._localStorageService.isSupported) {
-                    _this._localStorageService.remove("userName", "sessionId");
-                    _this._location.path("/");
-                }
-            };
-        }
 
         if (this._localStorageService.isSupported) {
             if (this._localStorageService.get("sessionId") === null) {
@@ -48,9 +36,9 @@ define(["exports", "app", "home/services/salesService"], function (exports, _app
         }
     };
 
-    HomeController.$inject = ["$location", "$rootScope", "localStorageService", "salesService"];
+    HomeController.$inject = ["$location", "$rootScope", "localStorageService"];
 
-    app.controller("homeController", HomeController).service("salesService", SalesService);
+    app.controller("homeController", HomeController);
 
     exports.HomeController = HomeController;
 });

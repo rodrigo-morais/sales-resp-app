@@ -1,4 +1,4 @@
-define(["exports", "angular", "angular-route", "angularAMD", "angular-local-storage", "aes", "angular-crypto", "angularCSS", "angular-resource", "bootstrap"], function (exports, _angular, _angularRoute, _angularAMD, _angularLocalStorage, _aes, _angularCrypto, _angularCSS, _angularResource, _bootstrap) {
+define(["exports", "angular", "angular-route", "angularAMD", "angular-local-storage", "aes", "angular-crypto", "angularCSS", "angular-resource", "bootstrap", "components/header/directives/headerDirective"], function (exports, _angular, _angularRoute, _angularAMD, _angularLocalStorage, _aes, _angularCrypto, _angularCSS, _angularResource, _bootstrap, _componentsHeaderDirectivesHeaderDirective) {
     "use strict";
 
     var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
@@ -20,6 +20,8 @@ define(["exports", "angular", "angular-route", "angularAMD", "angular-local-stor
     var ngResource = _interopRequire(_angularResource);
 
     var bootstrap = _interopRequire(_bootstrap);
+
+    var headerDirective = _interopRequire(_componentsHeaderDirectivesHeaderDirective);
 
     var app = angular.module("myApp", ["ngRoute", "ngResource", "door3.css", "LocalStorageModule", "mdo-angular-cryptography"]);
 
@@ -54,6 +56,8 @@ define(["exports", "angular", "angular-route", "angularAMD", "angular-local-stor
             controllerAs: "vm"
         }));
     }]);
+
+    app.directive("headerPage", [headerDirective]);
 
     return angularAMD.bootstrap(app);
 });

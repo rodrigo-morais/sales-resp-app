@@ -9,6 +9,7 @@ import angularCrypto from 'angular-crypto';
 import angularCss from 'angularCSS';
 import ngResource from 'angular-resource';
 import bootstrap from 'bootstrap';
+import headerDirective from "components/header/directives/headerDirective";
 
 let app = angular.module('myApp', ['ngRoute', 'ngResource', 'door3.css', 'LocalStorageModule', 'mdo-angular-cryptography']);
 
@@ -54,5 +55,8 @@ app.config([
 
   }
 ]);
+
+app
+    .directive('headerPage', [headerDirective]);
 
 return angularAMD.bootstrap(app);
