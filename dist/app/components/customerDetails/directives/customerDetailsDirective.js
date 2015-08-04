@@ -11,14 +11,10 @@ define(["exports", "module"], function (exports, module) {
             css: "app/components/customerDetails/css/customerDetails.css",
             replace: true,
             scope: {
-                customer: "="
+                customer: "=",
+                saveStatus: "="
             },
-            link: function link(scope, element, attrs, controller) {
-                scope.saveStatus = {
-                    visit: false,
-                    notes: false
-                };
-            }
+            link: function link(scope, element, attrs, controller) {}
         };
     };
 

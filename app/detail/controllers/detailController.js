@@ -2,15 +2,17 @@
 import { CustomerDetailsService } from "detail/services/customerDetailsService";
 
 class DetailController {
-    constructor($location, $rootScope, localStorageService, customerDetailsService){
+    constructor($location, $rootScope, localStorageService, customerDetailsService, toastr){
         let sessionId = null,
             _this = this;
 
         this._location = $location;
         this._localStorageService = localStorageService;
         this._rootScope = $rootScope;
+        this._service = customerDetailsService;
+        this._toastr = toastr;
 
-        this.buttons = ['save'];
+        this.buttons = ['back', 'save'];
         this.actions = [];
 
         if(this._localStorageService.isSupported) {
@@ -54,13 +56,63 @@ class DetailController {
         }
 
         this.actions.push(() => {
-            console.log('save');
+            this._location.path('/home');
         });
+
+        this.actions.push(() => {
+            this.save(sessionId);
+        });
+
+        this.saveStatus = {
+                visit: false,
+                notes: false
+            };
+    }
+
+    save(sessionId){
+        let _this = this;
+        if(this.saveStatus.visit){
+            this._service
+                .saveVisit(
+                    sessionId,
+                    this.customer.id,
+                    this.customer.visit.date,
+                    this.customer.visit.time,
+                    this.customer.visit.action,
+                    this.customer.visit.notes
+                ).then(function(data){
+                    _this.saveStatus.visit = false;
+                    if(data.code === 0){
+                        _this._toastr.success('Save with successful!', 'Customer Visit');
+                    }
+                    else{
+                        _this._toastr.error('Error when saving customer visit.', 'Customer Visit');
+                    }
+                });
+        }
+
+        if(this.saveStatus.notes){
+            this._service
+                .saveNotes(
+                    sessionId,
+                    this.customer.id,
+                    this.customer.status,
+                    this.customer.notes
+                ).then(function(data){
+                    _this.saveStatus.notes = false;
+                    if(data.code === 0){
+                        _this._toastr.success('Save with successful!', 'Customer Notes');
+                    }
+                    else{
+                        _this._toastr.error('Error when saving customer notes.', 'Customer Notes');
+                    }
+                });
+        }
     }
 
 }
 
-DetailController.$inject = ['$location', '$rootScope', 'localStorageService', 'customerDetailsService'];
+DetailController.$inject = ['$location', '$rootScope', 'localStorageService', 'customerDetailsService', 'toastr'];
 
 app
     .controller('detailController', DetailController)

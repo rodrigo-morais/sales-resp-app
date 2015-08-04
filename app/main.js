@@ -13,7 +13,9 @@ requirejs.config({
         'angularCSS': '../vendor/angular-css/angular-css',
         'bootstrap': '../vendor/bootstrap/dist/js/bootstrap.min',
         'aes': '../vendor/cryptojslib/rollups/aes',
-        'angular-crypto': '../vendor/angular-cryptography/mdo-angular-cryptography'
+        'angular-crypto': '../vendor/angular-cryptography/mdo-angular-cryptography',
+        'angular-toastr': '../vendor/angular-toastr/dist/angular-toastr.min',
+        'angular-toastr-tmp': '../vendor/angular-toastr/dist/angular-toastr.tpls.min'
     },
     "shim": {
         'angular': {
@@ -38,6 +40,7 @@ requirejs.config({
         },
         'angularAMD': ['angular'],
         'angular-crypto': ['angular'],
+        'angular-toastr-tmp': ['angular'],
         'bootstrap':
         {
             deps: ["jquery"]

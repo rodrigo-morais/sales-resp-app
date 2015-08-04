@@ -9,13 +9,10 @@ var customerDetailsDirective = () => {
         css: 'app/components/customerDetails/css/customerDetails.css',
         replace: true,
         scope: {
-            customer: '='
+            customer: '=',
+            saveStatus: '='
         },
         link: function (scope, element, attrs, controller) {
-            scope.saveStatus = {
-                visit: false,
-                notes: false
-            };
             
         }
     };
