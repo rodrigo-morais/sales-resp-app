@@ -13,6 +13,7 @@ import headerDirective from "components/header/directives/headerDirective";
 import footerDirective from "components/footer/directives/footerDirective";
 import customerTableDirective from "components/customerTable/directives/customerTableDirective";
 import customerDetailsHeaderDirective from "components/customerDetails/directives/customerDetailsHeaderDirective";
+import customerDetailsTabsDirective from "components/customerDetails/directives/customerDetailsTabsDirective";
 import customerDetailsDirective from "components/customerDetails/directives/customerDetailsDirective";
 
 let app = angular.module('myApp', ['ngRoute', 'ngResource', 'door3.css', 'LocalStorageModule', 'mdo-angular-cryptography']);
@@ -71,6 +72,7 @@ app
     .directive('footerPage', [footerDirective])
     .directive('customerTable', [customerTableDirective])
     .directive('customerDetailsHeader', [customerDetailsHeaderDirective])
+    .directive('customerDetailsTabs', [customerDetailsTabsDirective])
     .directive('customerDetails', [customerDetailsDirective]);
 
 return angularAMD.bootstrap(app);

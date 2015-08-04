@@ -13,7 +13,12 @@ define(["exports", "module"], function (exports, module) {
             scope: {
                 customer: "="
             },
-            link: function link(scope, element, attrs, controller) {}
+            link: function link(scope, element, attrs, controller) {
+                scope.saveStatus = {
+                    visit: false,
+                    notes: false
+                };
+            }
         };
     };
 

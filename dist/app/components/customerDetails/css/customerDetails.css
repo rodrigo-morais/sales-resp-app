@@ -26,3 +26,8 @@ div.panel-customer div.header-details i
 {
     cursor: pointer;
 }
+
+div.panel-customer div.tabs-details .tab-pane form
+{
+    margin-top: 2%;
+}

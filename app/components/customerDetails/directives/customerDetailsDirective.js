@@ -12,7 +12,10 @@ var customerDetailsDirective = () => {
             customer: '='
         },
         link: function (scope, element, attrs, controller) {
-            
+            scope.saveStatus = {
+                visit: false,
+                notes: false
+            };
             
         }
     };

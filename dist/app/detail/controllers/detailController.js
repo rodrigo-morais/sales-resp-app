@@ -51,6 +51,12 @@ define(["exports", "app", "detail/services/customerDetailsService"], function (e
                 }).filter(function (communication) {
                     return communication !== null;
                 }).join(" / ");
+
+                _this.customer.visit.date = new Date(_this.customer.visit.date);
+
+                var hour = _this.customer.visit.time.split(":")[0],
+                    minute = _this.customer.visit.time.split(":")[1].substring(0, 2);
+                _this.customer.visit.time = new Date(2015, 8, 1, hour, minute);
             });
         } else {
             this._location.path("/");

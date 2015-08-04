@@ -1,4 +1,4 @@
-define(["exports", "angular", "angular-route", "angularAMD", "angular-local-storage", "aes", "angular-crypto", "angularCSS", "angular-resource", "bootstrap", "components/header/directives/headerDirective", "components/footer/directives/footerDirective", "components/customerTable/directives/customerTableDirective", "components/customerDetails/directives/customerDetailsHeaderDirective", "components/customerDetails/directives/customerDetailsDirective"], function (exports, _angular, _angularRoute, _angularAMD, _angularLocalStorage, _aes, _angularCrypto, _angularCSS, _angularResource, _bootstrap, _componentsHeaderDirectivesHeaderDirective, _componentsFooterDirectivesFooterDirective, _componentsCustomerTableDirectivesCustomerTableDirective, _componentsCustomerDetailsDirectivesCustomerDetailsHeaderDirective, _componentsCustomerDetailsDirectivesCustomerDetailsDirective) {
+define(["exports", "angular", "angular-route", "angularAMD", "angular-local-storage", "aes", "angular-crypto", "angularCSS", "angular-resource", "bootstrap", "components/header/directives/headerDirective", "components/footer/directives/footerDirective", "components/customerTable/directives/customerTableDirective", "components/customerDetails/directives/customerDetailsHeaderDirective", "components/customerDetails/directives/customerDetailsTabsDirective", "components/customerDetails/directives/customerDetailsDirective"], function (exports, _angular, _angularRoute, _angularAMD, _angularLocalStorage, _aes, _angularCrypto, _angularCSS, _angularResource, _bootstrap, _componentsHeaderDirectivesHeaderDirective, _componentsFooterDirectivesFooterDirective, _componentsCustomerTableDirectivesCustomerTableDirective, _componentsCustomerDetailsDirectivesCustomerDetailsHeaderDirective, _componentsCustomerDetailsDirectivesCustomerDetailsTabsDirective, _componentsCustomerDetailsDirectivesCustomerDetailsDirective) {
     "use strict";
 
     var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
@@ -28,6 +28,8 @@ define(["exports", "angular", "angular-route", "angularAMD", "angular-local-stor
     var customerTableDirective = _interopRequire(_componentsCustomerTableDirectivesCustomerTableDirective);
 
     var customerDetailsHeaderDirective = _interopRequire(_componentsCustomerDetailsDirectivesCustomerDetailsHeaderDirective);
+
+    var customerDetailsTabsDirective = _interopRequire(_componentsCustomerDetailsDirectivesCustomerDetailsTabsDirective);
 
     var customerDetailsDirective = _interopRequire(_componentsCustomerDetailsDirectivesCustomerDetailsDirective);
 
@@ -70,7 +72,7 @@ define(["exports", "angular", "angular-route", "angularAMD", "angular-local-stor
         }));
     }]);
 
-    app.directive("headerPage", [headerDirective]).directive("footerPage", [footerDirective]).directive("customerTable", [customerTableDirective]).directive("customerDetailsHeader", [customerDetailsHeaderDirective]).directive("customerDetails", [customerDetailsDirective]);
+    app.directive("headerPage", [headerDirective]).directive("footerPage", [footerDirective]).directive("customerTable", [customerTableDirective]).directive("customerDetailsHeader", [customerDetailsHeaderDirective]).directive("customerDetailsTabs", [customerDetailsTabsDirective]).directive("customerDetails", [customerDetailsDirective]);
 
     return angularAMD.bootstrap(app);
 });

@@ -1,0 +1,66 @@
+<div class="tabs-details">
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active" data-ng:click="selectTab('notes')">
+        <a href="" aria-controls="notes" role="tab" data-toggle="tab">
+            Notes
+        </a>
+    </li>
+    <li role="presentation" data-ng:click="selectTab('visit')">
+        <a href="" aria-controls="visit" role="tab" data-toggle="tab">
+            Visit
+        </a>
+    </li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="notes">
+        <form>
+          <fieldset>
+              <div class="form-group">
+                  <label>Status:</label>
+                  <select data-ng:model="customer.status" data-ng:change="changeStatus('notes')" class="form-control">
+                      <option value="New">New</option>
+                      <option value="InProgress">InProgress</option>
+                      <option value="OrderPlaced">OrderPlaced</option>
+                      <option value="Support">Support</option>
+                      <option value="Cancelled">Cancelled</option>
+                      <option value="Rejected">Rejected</option>
+                  </select>
+              </div>
+              <div class="form-group">
+                  <label>Notes:</label>
+                  <textarea rows="5" cols="50" data-ng:model="customer.notes" data-ng:change="changeStatus('notes')" class="form-control"></textarea>
+              </div>
+          </fieldset>
+      </form>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="visit">
+        <form>
+          <fieldset>
+              <div class="form-group">
+                  <label>Date:</label>
+                  <input type="date" data-ng:change="changeStatus('visit')" placeholder="yyyy-MM-dd" data-ng:model="customer.visit.date" />
+                  <input type="time" data-ng:change="changeStatus('visit')" data-ng:model="customer.visit.time" />
+              </div>
+              <div class="form-group">
+                  <label>Action:</label>
+                  <select data-ng:model="customer.visit.action" data-ng:change="changeStatus('visit')" class="form-control">
+                      <option value="Offer">Offer</option>
+                      <option value="Lead">Lead</option>
+                      <option value="Opportunity">Opportunity</option>
+                      <option value="New Customer">New Customer</option>
+                  </select>
+              </div>
+              <div class="form-group">
+                  <label>Notes:</label>
+                  <textarea rows="5" cols="50" data-ng:model="customer.visit.notes" data-ng:change="changeStatus('visit')" class="form-control"></textarea>
+              </div>
+          </fieldset>
+      </form>
+    </div>
+  </div>
+
+</div>

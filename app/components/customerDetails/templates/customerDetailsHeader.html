@@ -94,7 +94,7 @@
                 {{customer.visit.date | date:'yyyy-MM-dd'}}
             </span>
             <span class="customer-value col-md-4">
-                {{customer.visit.time}}
+                {{customer.visit.time | date:'hh:mm a'}}
             </span>
             <span class="customer-value col-md-4">
                 {{customer.visit.action}}
