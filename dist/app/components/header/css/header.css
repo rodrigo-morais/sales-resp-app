@@ -104,3 +104,20 @@ header h3
         width: 290px;
     }
 }
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+   header
+    {
+        width: 768px;
+        height: 102px;
+    }
+
+    header h3
+    {
+        width: 370px;
+    }
+}

@@ -132,3 +132,19 @@ div.customer table td.id
         width: 60%;
     }
 }
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+   .customerTable .form-inline .form-group
+    {
+        padding: 0px;
+        width: 100%;
+    }
+    .customerTable form input[type="text"]
+    {
+        width: 74%;
+    }
+}

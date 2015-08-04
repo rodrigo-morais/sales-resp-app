@@ -115,3 +115,21 @@ footer form button
         width: 10%;
     }
 }
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    footer
+    {
+        height: 50px;
+        position:absolute;
+        width: 768px;
+    }
+
+    footer form button
+    {
+        width: 10%;
+    }
+}
