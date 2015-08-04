@@ -66,6 +66,49 @@ main
     }
 }
 
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation : portrait) { 
+    body
+    {
+        width: 414px;
+        height: 716px;
+    }
+
+    main
+    {
+        width: 414px;
+        height: 716px;
+    }
+
+    .home,
+    .details
+    {
+        width: 414px;
+        height: 716px;
+    }
+}
+
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation : landscape) { 
+    body
+    {
+        width: 736px;
+        height: 394px;
+    }
+
+    main
+    {
+        width: 736px;
+        height: 394px;
+    }
+
+    .home,
+    .details
+    {
+        width: 736px;
+        height: 394px;
+    }
+}
+
 .login
 {
     position: absolute;

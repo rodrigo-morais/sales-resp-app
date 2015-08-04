@@ -110,3 +110,25 @@ div.customer table td.id
         font-size: 0.8em;
     }
 }
+
+@media only screen and (min-device-width: 414px)
+    and (max-device-width: 736px)
+    and (orientation : landscape) { 
+    .customerTable
+    {
+        position: relative;
+        float: left;
+        height: 280px;
+    }
+
+    .customerTable .form-inline .form-group
+    {
+        padding: 0px;
+        width: 100%;
+    }
+
+    .customerTable form input[type="text"]
+    {
+        width: 60%;
+    }
+}

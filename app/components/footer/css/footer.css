@@ -81,3 +81,37 @@ footer form button
         width: 10%;
     }
 }
+
+@media only screen
+    and (min-device-width: 414px)
+    and (max-device-width: 736px)
+    and (orientation : portrait) { 
+    footer
+    {
+        height: 50px;
+        position:absolute;
+        width: 414px;
+    }
+
+    footer form button
+    {
+        width: 20%;
+    }
+}
+
+
+@media only screen and (min-device-width: 414px)
+    and (max-device-width: 736px)
+    and (orientation : landscape) { 
+    footer
+    {
+        height: 50px;
+        position:absolute;
+        width: 736px;
+    }
+
+    footer form button
+    {
+        width: 10%;
+    }
+}

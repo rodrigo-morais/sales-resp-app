@@ -70,3 +70,37 @@ header h3
         width: 290px;
     }
 }
+
+@media only screen
+    and (min-device-width: 414px)
+    and (max-device-width: 736px)
+    and (orientation : portrait) { 
+    header
+    {
+        width: 736px;
+        height: 72px;
+    }
+
+    header h3
+    {
+        font-size: 0.9em;
+        width: 290px;
+    }
+}
+
+
+@media only screen and (min-device-width: 414px)
+    and (max-device-width: 736px)
+    and (orientation : landscape) { 
+    header
+    {
+        width: 736px;
+        height: 39px;
+    }
+
+    header h3
+    {
+        font-size: 0.9em;
+        width: 290px;
+    }
+}
