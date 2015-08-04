@@ -21,3 +21,8 @@ div.panel-customer div.header-details
 {
     margin-bottom: 1.5%;
 }
+
+div.panel-customer div.header-details i
+{
+    cursor: pointer;
+}
