@@ -15,7 +15,6 @@ div.customer
 {
     height: 60.9%;
     overflow-y: scroll;
-    /*margin: 2% 0 2% 10%;*/
 }
 
 div.customer table thead
@@ -44,6 +43,46 @@ div.customer table tbody tr
 div.customer table td.id
 {
     text-align: center;
+}
+
+@media only screen and (min-device-width: 320px)
+    and (max-device-width: 568px)
+    and (orientation : portrait) {
+
+    .customerTable
+    {
+        position: relative;
+        float: left;
+        height: 556px;
+    }
+
+    .customerTable .form-inline .form-group
+    {
+        padding: 0px;
+    }
+
+    .customerTable form input[type="text"]
+    {
+        width: 41%;
+    }
+
+    .customerTable form select
+    {
+        width: 147px!important;
+    }
+
+    div.customer table
+    {
+        font-size: 0.8em;
+    }
+
+    .customerTable.col-sm-offset-1 {
+        margin-left: 4.333333%;
+    }
+
+    .customerTable.col-sm-10 {
+        width: 92.333333%;
+    }
 }
 
 @media only screen 
@@ -111,6 +150,21 @@ div.customer table td.id
     }
 }
 
+@media only screen and (min-device-width: 320px)
+    and (max-device-width: 568px)
+    and (orientation : landscape) {
+
+    .customerTable
+    {
+        height: 230px;
+    }
+
+    .customerTable form input[type="text"]
+    {
+        width: 52%;
+    }
+}
+
 @media only screen and (min-device-width: 414px)
     and (max-device-width: 736px)
     and (orientation : landscape) { 
@@ -143,6 +197,7 @@ div.customer table td.id
         padding: 0px;
         width: 100%;
     }
+
     .customerTable form input[type="text"]
     {
         width: 74%;

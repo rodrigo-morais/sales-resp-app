@@ -36,6 +36,37 @@ header h3
     margin: 0.5em auto;
 }
 
+@media only screen and (min-device-width: 320px)
+    and (max-device-width: 568px)
+    and (orientation : landscape) { 
+    header
+    {
+        width: 568px;
+        height: 32px;
+    }
+
+    header h3
+    {
+        width: 270px;
+    }
+}
+
+@media only screen and (min-device-width: 320px)
+    and (max-device-width: 568px)
+    and (orientation : portrait) { 
+    header
+    {
+        width: 320px;
+        height: 56px;
+    }
+
+    header h3
+    {
+        width: 370px;
+        font-size: 0.9em;
+    }
+}
+
 @media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 

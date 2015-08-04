@@ -16,6 +16,29 @@ main
     overflow: hidden;
 }
 
+@media only screen and (min-device-width: 320px)
+    and (max-device-width: 568px)
+    and (orientation : portrait) { 
+    body
+    {
+        width: 320px;
+        height: 568px;
+    }
+
+    main
+    {
+        width: 320px;
+        height: 568px;
+    }
+
+    .home,
+    .details
+    {
+        width: 320px;
+        height: 568px;
+    }
+}
+
 @media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 
@@ -63,6 +86,29 @@ main
     {
         width: 667px;
         height: 375px;
+    }
+}
+
+@media only screen and (min-device-width: 320px)
+    and (max-device-width: 568px)
+    and (orientation : landscape) { 
+    body
+    {
+        width: 568px;
+        height: 320px;
+    }
+
+    main
+    {
+        width: 568px;
+        height: 320px;
+    }
+
+    .home,
+    .details
+    {
+        width: 568px;
+        height: 320px;
     }
 }
 

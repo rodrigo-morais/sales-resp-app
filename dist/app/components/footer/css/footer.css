@@ -48,6 +48,22 @@ footer form button
     margin: 0.7% 1% 0;
 }
 
+@media only screen and (min-device-width: 320px)
+    and (max-device-width: 568px)
+    and (orientation : portrait) { 
+    footer
+    {
+        height: 46px;
+        position:absolute;
+        width: 320px;
+    }
+
+    footer form button
+    {
+        width: 20%;
+    }
+}
+
 @media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 
@@ -56,6 +72,7 @@ footer form button
     {
         height: 50px;
         position:absolute;
+        width: 375px;
     }
 
     footer form button
@@ -79,6 +96,23 @@ footer form button
     footer form button
     {
         width: 10%;
+    }
+}
+
+@media only screen and (min-device-width: 320px)
+    and (max-device-width: 568px)
+    and (orientation : landscape) { 
+    footer
+    {
+        height: 40px;
+        position:absolute;
+        width: 568px;
+    }
+
+    footer form button
+    {
+        width: 15%;
+        height: 76%;
     }
 }
 
