@@ -9,7 +9,12 @@ define(["exports", "module"], function (exports, module) {
             restrict: "E",
             templateUrl: html,
             replace: true,
-            link: function link(scope, element, attrs, controller) {}
+            scope: {
+                customer: "="
+            },
+            link: function link(scope, element, attrs, controller) {
+                scope.isMobile = /Mobi/i.test(navigator.userAgent);
+            }
         };
     };
 

@@ -8,6 +8,9 @@ var customerDetailsDirective = () => {
         templateUrl: html,
         css: 'app/components/customerDetails/css/customerDetails.css',
         replace: true,
+        scope: {
+            customer: '='
+        },
         link: function (scope, element, attrs, controller) {
             
             

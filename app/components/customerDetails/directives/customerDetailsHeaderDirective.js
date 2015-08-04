@@ -6,9 +6,11 @@ var customerDetailsHeaderDirective = () => {
         restrict: 'E',
         templateUrl: html,
         replace: true,
+        scope: {
+            customer: '='
+        },
         link: function (scope, element, attrs, controller) {
-            
-            
+            scope.isMobile = /Mobi/i.test(navigator.userAgent);
         }
     };
 };

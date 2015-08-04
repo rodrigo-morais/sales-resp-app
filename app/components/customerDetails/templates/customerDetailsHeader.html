@@ -1,39 +1,39 @@
 <div class="header-details row col-md-12">
     <div class="row col-md-12">
         <span class="customer-label col-sm-1">Id:</span>
-        <span class="customer-value col-md-1">{{vm.customer.id}}</span>
+        <span class="customer-value col-md-1">{{customer.id}}</span>
 
         <span class="customer-label col-sm-1">Name:</span>
-        <span class="customer-value col-md-3">{{vm.customer.customername}}</span>
+        <span class="customer-value col-md-3">{{customer.customername}}</span>
 
         <span class="customer-label col-sm-1">Product:</span>
-        <span class="customer-value col-md-3">{{vm.customer.productname}}</span>
+        <span class="customer-value col-md-3">{{customer.productname}}</span>
 
         <span class="customer-label col-sm-1">Status:</span>
-        <span class="customer-value col-md-1">{{vm.customer.status}}</span>
+        <span class="customer-value col-md-1">{{customer.status}}</span>
     </div>
     <div class="row col-md-12">
-        <span class="customer-label col-sm-1">Phones:</span>
-        <span class="customer-value col-md-4">
-            {{vm.customer.phones}}
+        <span class="customer-label col-sm-1" data-ng:if="!isMobile">Phones:</span>
+        <span class="customer-value col-md-4" data-ng:if="!isMobile">
+            {{customer.phones}}-{{isMobile}}
         </span>
-        <span class="customer-label col-sm-1"></span>
+        <span class="customer-label col-sm-1" data-ng:if="!isMobile"></span>
 
         <span class="customer-label col-sm-1">Skypes:</span>
         <span class="customer-value col-md-4">
-            {{vm.customer.skypes}}
+            {{customer.skypes}}
         </span>
         <span class="customer-label"></span>
     </div>
     <div class="row col-md-12">
         <span class="customer-label col-sm-1">Emails:</span>
         <span class="customer-value col-md-3">
-            <a href="mailto:{{vm.customer.emails}}">
-                {{vm.customer.emails}}
+            <a href="mailto:{{customer.emails}}">
+                {{customer.emails}}
             </a>
         </span>
     </div>
-    <div class="row col-md-12" data-ng:repeat="address in vm.customer.addresses">
+    <div class="row col-md-12" data-ng:repeat="address in customer.addresses">
         <span class="customer-label col-sm-1">Street:</span>
         <span class="customer-value col-md-2">
             {{address.street1}}

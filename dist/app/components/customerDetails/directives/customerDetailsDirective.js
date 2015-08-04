@@ -10,6 +10,9 @@ define(["exports", "module"], function (exports, module) {
             templateUrl: html,
             css: "app/components/customerDetails/css/customerDetails.css",
             replace: true,
+            scope: {
+                customer: "="
+            },
             link: function link(scope, element, attrs, controller) {}
         };
     };
