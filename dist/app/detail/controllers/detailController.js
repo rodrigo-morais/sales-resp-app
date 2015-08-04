@@ -101,7 +101,7 @@ define(["exports", "app", "detail/services/customerDetailsService"], function (e
                     if (this.saveStatus.notes) {
                         this._service.saveNotes(sessionId, this.customer.id, this.customer.status, this.customer.notes).then(function (data) {
                             _this.saveStatus.notes = false;
-                            if (data.code === 4) {
+                            if (data.code === 0) {
                                 _this._toastr.success("Save with successful!", "Customer Notes");
                             } else {
                                 _this._toastr.error("Error when saving customer notes.", "Customer Notes");
