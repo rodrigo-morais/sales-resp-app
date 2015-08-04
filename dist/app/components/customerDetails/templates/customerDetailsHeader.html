@@ -1,42 +1,53 @@
 <div class="header-details row col-md-12">
-    <div class="col-md-4">
+    <div class="col-md-3">
         <i class="glyphicon glyphicon-plus" data-ng:if="!showDetails" data-ng:click="toggleDetails()"></i>
         <i class="glyphicon glyphicon-minus" data-ng:if="showDetails" data-ng:click="toggleDetails()"></i>
         <span class="customer-label">Details</span>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
         <i class="glyphicon glyphicon-plus" data-ng:if="!showCommunication" data-ng:click="toggleCommunication()"></i>
         <i class="glyphicon glyphicon-minus" data-ng:if="showCommunication" data-ng:click="toggleCommunication()"></i>
         <span class="customer-label">Communication</span>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
         <i class="glyphicon glyphicon-plus" data-ng:if="!showAddresses" data-ng:click="toggleAdresses()"></i>
         <i class="glyphicon glyphicon-minus" data-ng:if="showAddresses" data-ng:click="toggleAdresses()"></i>
         <span class="customer-label">Addresses</span>
     </div>
-    <div class="col-md-12">
-        <div class="row" data-ng:if="showDetails">
+    <div class="col-md-3">
+        <i class="glyphicon glyphicon-plus" data-ng:if="!showVisit" data-ng:click="toggleVisit()"></i>
+        <i class="glyphicon glyphicon-minus" data-ng:if="showVisit" data-ng:click="toggleVisit()"></i>
+        <span class="customer-label">Visit</span>
+    </div>
+    <div class="col-md-12" data-ng:if="showDetails">
+        <div class="row">
             <span class="customer-label col-md-1">Id</span>
             <span class="customer-label col-md-5">Name</span>
             <span class="customer-label col-md-5">Product</span>
             <span class="customer-label col-md-1">Status</span>
         </div>
-        <div class="row" data-ng:if="showDetails">
+        <div class="row">
             <span class="customer-value col-md-1">{{customer.id}}</span>
             <span class="customer-value col-md-5">{{customer.customername}}</span>
             <span class="customer-value col-md-5">{{customer.productname}}</span>
             <span class="customer-value col-md-1">{{customer.status}}</span>
         </div>
+        <div class="row">
+            <span class="customer-label col-md-12">Notes</span>
+        </div>
+        <div class="row">
+            <span class="customer-value col-md-12">{{customer.notes}}</span>
+        </div>
     </div>
-    <div class="col-md-12">
-        <div class="row" data-ng:if="showCommunication">
+    <div class="col-md-12" data-ng:if="showCommunication">
+        <div class="row">
             <span class="customer-label col-md-4" data-ng:if="!isMobile">
                 Phones
             </span>
-            <span class="customer-label col-md-4">Skypes:</span>
-            <span class="customer-label col-md-4">Emails:</span>
+            <span class="customer-label col-md-4">Skypes</span>
+            <span class="customer-label col-md-4">Emails</span>
         </div>
-        <div class="row" data-ng:if="showCommunication">
+        <div class="row">
             <span class="customer-value col-md-4" data-ng:if="!isMobile">
                 {{customer.phones}}
             </span>
@@ -50,14 +61,14 @@
             </span>
         </div>
     </div>
-    <div class="col-md-12">
-        <div class="row" data-ng:if="showAddresses">
-            <span class="customer-label col-md-4">Street:</span>
-            <span class="customer-label col-md-3">City:</span>
-            <span class="customer-label col-md-3">State:</span>
-            <span class="customer-label col-md-2">Country:</span>
+    <div class="col-md-12" data-ng:if="showAddresses">
+        <div class="row">
+            <span class="customer-label col-md-4">Street</span>
+            <span class="customer-label col-md-3">City</span>
+            <span class="customer-label col-md-3">State</span>
+            <span class="customer-label col-md-2">Country</span>
         </div>
-        <div class="row" data-ng:repeat="address in customer.addresses" data-ng:if="showAddresses">
+        <div class="row" data-ng:repeat="address in customer.addresses">
             <span class="customer-value col-md-4">
                 {{address.street1}}
             </span>
@@ -69,6 +80,32 @@
             </span>
             <span class="customer-value col-md-2">
                 {{address.country}}
+            </span>
+        </div>
+    </div>
+    <div class="col-md-12" data-ng:if="showVisit">
+        <div class="row">
+            <span class="customer-label col-md-4">Date</span>
+            <span class="customer-label col-md-4">Time</span>
+            <span class="customer-label col-md-4">Action</span>
+        </div>
+        <div class="row">
+            <span class="customer-value col-md-4">
+                {{customer.visit.date | date:'yyyy-MM-dd'}}
+            </span>
+            <span class="customer-value col-md-4">
+                {{customer.visit.time}}
+            </span>
+            <span class="customer-value col-md-4">
+                {{customer.visit.action}}
+            </span>
+        </div>
+        <div class="row">
+            <span class="customer-label col-md-12">Notes</span>
+        </div>
+        <div class="row">
+            <span class="customer-value col-md-12">
+                {{customer.visit.notes}}
             </span>
         </div>
     </div>

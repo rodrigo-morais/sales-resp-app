@@ -17,23 +17,34 @@ define(["exports", "module"], function (exports, module) {
                 scope.showDetails = false;
                 scope.showCommunication = false;
                 scope.showAddresses = false;
+                scope.showVisit = false;
 
                 scope.toggleDetails = function () {
                     scope.showDetails = !scope.showDetails;
                     scope.showCommunication = false;
                     scope.showAddresses = false;
+                    scope.showVisit = false;
                 };
 
                 scope.toggleCommunication = function () {
                     scope.showCommunication = !scope.showCommunication;
                     scope.showDetails = false;
                     scope.showAddresses = false;
+                    scope.showVisit = false;
                 };
 
                 scope.toggleAdresses = function () {
                     scope.showAddresses = !scope.showAddresses;
                     scope.showDetails = false;
                     scope.showCommunication = false;
+                    scope.showVisit = false;
+                };
+
+                scope.toggleVisit = function () {
+                    scope.showVisit = !scope.showVisit;
+                    scope.showDetails = false;
+                    scope.showCommunication = false;
+                    scope.showAddresses = false;
                 };
             }
         };

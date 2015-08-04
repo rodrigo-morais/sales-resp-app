@@ -14,23 +14,34 @@ var customerDetailsHeaderDirective = () => {
             scope.showDetails = false;
             scope.showCommunication = false;
             scope.showAddresses = false;
+            scope.showVisit = false;
 
             scope.toggleDetails = () => {
                 scope.showDetails = !scope.showDetails;
                 scope.showCommunication = false;
                 scope.showAddresses = false;
+                scope.showVisit = false;
             };
 
             scope.toggleCommunication = () => {
                 scope.showCommunication = !scope.showCommunication;
                 scope.showDetails = false;
                 scope.showAddresses = false;
+                scope.showVisit = false;
             };
 
             scope.toggleAdresses = () => {
                 scope.showAddresses = !scope.showAddresses;
                 scope.showDetails = false;
                 scope.showCommunication = false;
+                scope.showVisit = false;
+            };
+
+            scope.toggleVisit = () => {
+                scope.showVisit = !scope.showVisit;
+                scope.showDetails = false;
+                scope.showCommunication = false;
+                scope.showAddresses = false;
             };
         }
     };
