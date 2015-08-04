@@ -57,24 +57,3 @@ div.customerDetails
 {
     height: 82%;
 }
-
-
-
-div.panel-customer
-{
-    margin: 1% 0 0 1%;
-}
-
-div.panel-customer span.customer-label
-{
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #333;
-    text-align: left;
-}
-
-div.panel-customer span.customer-value
-{
-    font-size: 1.2em;
-    text-align: left;
-}

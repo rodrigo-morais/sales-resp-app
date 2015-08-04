@@ -5,65 +5,7 @@
         data-user={{vm.customer.customername}}
     ></header-page>
     <div class="customerDetails row col-md-12">
-        <div class="panel panel-customer panel-default col-md-12">
-          <div class="panel-heading">
-            <h3 class="panel-title">Customer Details</h3>
-          </div>
-          <div class="panel-body">
-            <div class="row col-md-12">
-                <span class="customer-label col-sm-1">Id:</span>
-                <span class="customer-value col-md-1">{{vm.customer.id}}</span>
-
-                <span class="customer-label col-sm-1">Name:</span>
-                <span class="customer-value col-md-3">{{vm.customer.customername}}</span>
-
-                <span class="customer-label col-sm-1">Product:</span>
-                <span class="customer-value col-md-3">{{vm.customer.productname}}</span>
-
-                <span class="customer-label col-sm-1">Status:</span>
-                <span class="customer-value col-md-1">{{vm.customer.status}}</span>
-            </div>
-            <div class="row col-md-12">
-                <span class="customer-label col-sm-1">Phones:</span>
-                <span class="customer-value col-md-3">
-                    {{vm.customer.phones}}
-                </span>
-
-                <span class="customer-label col-sm-1">Skypes:</span>
-                <span class="customer-value col-md-3">
-                    {{vm.customer.skypes}}
-                </span>
-
-                <span class="customer-label col-sm-1">Emails:</span>
-                <span class="customer-value col-md-3">
-                    <a href="mailto:{{vm.customer.emails}}">
-                        {{vm.customer.emails}}
-                    </a>
-                </span>
-            </div>
-            <div class="row col-md-12" data-ng:repeat="address in vm.customer.addresses">
-                <span class="customer-label col-sm-1">Street:</span>
-                <span class="customer-value col-md-2">
-                    {{address.street1}}
-                </span>
-
-                <span class="customer-label col-sm-1">City:</span>
-                <span class="customer-value col-md-2">
-                    {{address.city}}
-                </span>
-
-                <span class="customer-label col-sm-1">State:</span>
-                <span class="customer-value col-md-2">
-                    {{address.state}}
-                </span>
-
-                <span class="customer-label col-sm-1">Country:</span>
-                <span class="customer-value col-md-2">
-                    {{address.country}}
-                </span>
-            </div>
-          </div>
-        </div>
+        <customer-details></customer-details>
     </div>
     <footer-page
         data-buttons=vm.buttons
