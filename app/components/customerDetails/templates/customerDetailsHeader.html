@@ -41,14 +41,14 @@
     </div>
     <div class="col-md-12" data-ng:if="showCommunication">
         <div class="row">
-            <span class="customer-label col-md-4" data-ng:if="!isMobile">
+            <span class="customer-label col-md-4" data-ng:if="isMobile">
                 Phones
             </span>
             <span class="customer-label col-md-4">Skypes</span>
             <span class="customer-label col-md-4">Emails</span>
         </div>
         <div class="row">
-            <span class="customer-value col-md-4" data-ng:if="!isMobile">
+            <span class="customer-value col-md-4" data-ng:if="isMobile">
                 {{customer.phones}}
             </span>
             <span class="customer-value col-md-4">
