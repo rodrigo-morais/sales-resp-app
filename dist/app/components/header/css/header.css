@@ -35,3 +35,38 @@ header h3
     width: 40%;
     margin: 0.5em auto;
 }
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (orientation: portrait) { 
+    header
+    {
+        width: 375px;
+        height: 56.7px;
+    }
+
+    header h3
+    {
+        font-size: 0.9em;
+        width: 190px;
+    }
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    header
+    {
+        width: 667px;
+        height: 35px;
+    }
+
+    header h3
+    {
+        font-size: 0.9em;
+        width: 290px;
+    }
+}

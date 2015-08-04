@@ -2,9 +2,10 @@ footer
 {
     background-color: #000000;
     color: #FFFFFF;
-    bottom: 0;
     height: 8%;
-    position: absolute;
+    position:fixed;
+    left:0px;
+    bottom:0px;
     width: 100%;
     clear: both;
     margin: 0px!important;
@@ -43,6 +44,40 @@ footer form
 
 footer form button
 {
-    width: 5%;
+    width: 7%;
     margin: 0.7% 1% 0;
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (orientation: portrait) { 
+    footer
+    {
+        height: 50px;
+        position:absolute;
+    }
+
+    footer form button
+    {
+        width: 20%;
+    }
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    footer
+    {
+        height: 50px;
+        position:absolute;
+        width: 667px;
+    }
+
+    footer form button
+    {
+        width: 10%;
+    }
 }
