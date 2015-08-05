@@ -94,35 +94,6 @@ header h3
 }
 
 @media only screen and (min-device-height: 480px){
-    header form .form-group button
-    {
-        padding-top: 6px;
-    }
-
-    header span
-    {
-        margin-top: 1%;
-    }
-}
-
-@media only screen and (min-device-height: 600px){
-    header form
-    {
-        width: 6%;
-    }
-
-    header form .form-group button
-    {
-        padding-top: 6px;
-    }
-
-    header span
-    {
-        margin-top: 0.5%;
-    }
-}
-
-@media only screen and (min-device-width: 480px){
     header
     {
         height: 10%;
@@ -137,6 +108,30 @@ header h3
     {
         height: 100%;
         font-size: 0.8em;
+        padding-top: 6px;
+    }
+
+    header span
+    {
+        margin-top: 1%;
+    }
+}
+
+@media only screen and (min-device-height: 600px){
+    header form
+    {
+        width: 13%;
+    }
+
+    header form .form-group button
+    {
+        padding-top: 6px;
+        height: 36%;
+    }
+
+    header span
+    {
+        margin-top: 0.5%;
     }
 }
 

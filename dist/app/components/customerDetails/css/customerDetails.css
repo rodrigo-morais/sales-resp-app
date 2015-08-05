@@ -68,6 +68,11 @@ div.panel-customer div.tabs-details .tab-pane form
     {
         width: 25%;
     }
+
+    div.panel-customer span.customer-label
+    {
+        font-size: 0.9em;
+    }
 }
 
 @media only screen and (min-device-width: 736px){
