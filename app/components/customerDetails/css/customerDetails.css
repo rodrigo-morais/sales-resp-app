@@ -22,12 +22,61 @@ div.panel-customer div.header-details
     margin-bottom: 1.5%;
 }
 
+div.panel-customer div.header-details div
+{
+    position: relative;
+    float: left;
+}
+
 div.panel-customer div.header-details i
 {
     cursor: pointer;
 }
 
+div.panel-customer div.tabs-details .tab-content
+{
+    max-height: 43vh;
+    overflow: auto;
+    width: 99.5%;
+}
+
 div.panel-customer div.tabs-details .tab-pane form
 {
     margin-top: 2%;
+}
+
+@media only screen and (min-device-width: 320px){
+    div.panel-customer div.header-details
+    {
+        font-size: 0.6em;
+    }
+
+    div.panel-customer div.header-details div
+    {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-device-width: 600px){
+    div.panel-customer div.header-details
+    {
+        font-size: 0.9em;
+    }
+
+    div.panel-customer div.header-details div
+    {
+        width: 25%;
+    }
+}
+
+@media only screen and (min-device-width: 736px){
+    div.panel-customer div.header-details
+    {
+        font-size: 0.8em;
+    }
+
+    div.panel-customer div.header-details div
+    {
+        width: 25%;
+    }
 }

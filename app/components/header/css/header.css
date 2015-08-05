@@ -36,119 +36,134 @@ header h3
     margin: 0.5em auto;
 }
 
-@media only screen and (min-device-width: 320px)
-    and (max-device-width: 568px)
-    and (orientation : landscape) { 
+@media only screen and (min-device-width: 320px){
     header
     {
-        width: 568px;
-        height: 32px;
+        width: 100%;
+        height: 7%;
+        padding-right: 5px!important;
     }
 
     header h3
     {
-        width: 270px;
+        width: 63%;
+        font-size: 0.8em;
+    }
+
+    header form
+    {
+        width: 17%;
+        margin-right: 0.1%;
+    }
+
+    header form .form-group
+    {
+        width: 100%;
+    }
+
+    header form .form-group button
+    {
+        width: 100%;
+        height: 80%;
+        font-size: 0.7em;
+    }
+
+    header span
+    {
+        font-size: 0.7em;
     }
 }
 
-@media only screen and (min-device-width: 320px)
-    and (max-device-width: 568px)
-    and (orientation : portrait) { 
-    header
+@media only screen and (min-device-height: 320px){
+    header form .form-group button
     {
-        width: 320px;
-        height: 56px;
+        padding-top: 2%;
     }
 
-    header h3
+    header span
     {
-        width: 370px;
-        font-size: 0.9em;
+        margin-top: 0.5%;
     }
 }
 
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (orientation: portrait) { 
-    header
-    {
-        width: 375px;
-        height: 56.7px;
-    }
-
+@media only screen and (min-device-height: 360px){
     header h3
     {
-        font-size: 0.9em;
-        width: 190px;
+        margin-top: 0.4%;
     }
 }
 
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
-    header
+@media only screen and (min-device-height: 480px){
+    header form .form-group button
     {
-        width: 667px;
-        height: 35px;
+        padding-top: 6px;
     }
 
-    header h3
+    header span
     {
-        font-size: 0.9em;
-        width: 290px;
+        margin-top: 1%;
     }
 }
 
-@media only screen
-    and (min-device-width: 414px)
-    and (max-device-width: 736px)
-    and (orientation : portrait) { 
-    header
+@media only screen and (min-device-height: 600px){
+    header form
     {
-        width: 736px;
-        height: 72px;
+        width: 6%;
     }
 
-    header h3
+    header form .form-group button
     {
-        font-size: 0.9em;
-        width: 290px;
-    }
-}
-
-
-@media only screen and (min-device-width: 414px)
-    and (max-device-width: 736px)
-    and (orientation : landscape) { 
-    header
-    {
-        width: 736px;
-        height: 39px;
+        padding-top: 6px;
     }
 
-    header h3
+    header span
     {
-        font-size: 0.9em;
-        width: 290px;
+        margin-top: 0.5%;
     }
 }
 
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-   header
+@media only screen and (min-device-width: 480px){
+    header
     {
-        width: 768px;
-        height: 102px;
+        height: 10%;
     }
 
     header h3
     {
-        width: 370px;
+        font-size: 1.2em;
     }
+
+    header form .form-group button
+    {
+        height: 100%;
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (min-device-width: 600px){
+    header h3
+    {
+        font-size: 1.6em;
+    }
+
+    header span
+    {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (min-device-width: 768px){
+    header h3
+    {
+        width: 60%;
+        font-size: 2em;
+    }
+}
+
+@media only screen and (min-device-width: 992px){
+    
+}
+
+@media only screen and (min-device-width: 1200px){
+    
 }

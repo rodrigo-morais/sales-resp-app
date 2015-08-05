@@ -48,122 +48,74 @@ footer form button
     margin: 0.7% 1% 0;
 }
 
-@media only screen and (min-device-width: 320px)
-    and (max-device-width: 568px)
-    and (orientation : portrait) { 
+@media only screen and (min-device-height: 320px){
     footer
     {
-        height: 46px;
-        position:absolute;
-        width: 320px;
+        height: 12%;
     }
 
     footer form button
     {
-        width: 20%;
+        margin: 1% 1% 1% 0;
     }
 }
 
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (orientation: portrait) { 
+@media only screen and (min-device-height: 480px){
     footer
     {
-        height: 50px;
-        position:absolute;
-        width: 375px;
+        height: 8%;
     }
 
-    footer form button
-    {
-        width: 20%;
+    footer form button {
+        margin: 0.4% 1% 1% 0;
     }
 }
 
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
+@media only screen and (min-device-height: 736px){
     footer
     {
-        height: 50px;
-        position:absolute;
-        width: 667px;
+        height: 6%;
+    }
+}
+
+@media only screen and (min-device-height: 992px){
+    footer
+    {
+        height: 5%;
+    }
+}
+
+@media only screen and (min-device-width: 320px){
+    footer
+    {
+        width: 100%;
     }
 
     footer form button
     {
         width: 10%;
+        min-width: 60px;
+        height: 90%;
+        max-height: 30px;
     }
 }
 
-@media only screen and (min-device-width: 320px)
-    and (max-device-width: 568px)
-    and (orientation : landscape) { 
-    footer
-    {
-        height: 40px;
-        position:absolute;
-        width: 568px;
-    }
-
-    footer form button
-    {
-        width: 15%;
-        height: 76%;
-    }
+@media only screen and (min-device-width: 480px){
+    
 }
 
-@media only screen
-    and (min-device-width: 414px)
-    and (max-device-width: 736px)
-    and (orientation : portrait) { 
-    footer
-    {
-        height: 50px;
-        position:absolute;
-        width: 414px;
-    }
-
-    footer form button
-    {
-        width: 20%;
-    }
+@media only screen and (min-device-width: 600px){
+    
 }
 
-
-@media only screen and (min-device-width: 414px)
-    and (max-device-width: 736px)
-    and (orientation : landscape) { 
-    footer
-    {
-        height: 50px;
-        position:absolute;
-        width: 736px;
-    }
-
-    footer form button
-    {
-        width: 10%;
-    }
+@media only screen and (min-device-width: 768px){
+    
 }
 
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-    footer
-    {
-        height: 50px;
-        position:absolute;
-        width: 768px;
-    }
+@media only screen and (min-device-width: 992px){
+    
+}
 
-    footer form button
-    {
-        width: 10%;
-    }
+@media only screen and (min-device-width: 1200px){
+    
 }

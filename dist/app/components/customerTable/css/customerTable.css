@@ -45,161 +45,66 @@ div.customer table td.id
     text-align: center;
 }
 
-@media only screen and (min-device-width: 320px)
-    and (max-device-width: 568px)
-    and (orientation : portrait) {
-
-    .customerTable
-    {
-        position: relative;
-        float: left;
-        height: 556px;
-    }
-
-    .customerTable .form-inline .form-group
-    {
-        padding: 0px;
-    }
-
-    .customerTable form input[type="text"]
-    {
-        width: 41%;
-    }
-
-    .customerTable form select
-    {
-        width: 147px!important;
-    }
-
-    div.customer table
-    {
-        font-size: 0.8em;
-    }
-
-    .customerTable.col-sm-offset-1 {
-        margin-left: 4.333333%;
-    }
-
-    .customerTable.col-sm-10 {
-        width: 92.333333%;
-    }
-}
-
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (orientation: portrait) { 
+@media only screen and (min-device-width: 320px){
     .customerTable
     {
         position: relative;
         float: left;
     }
 
-    .customerTable .form-inline .form-group
+    .customerTable form
     {
-        padding: 0px;
-    }
-
-    .customerTable form input[type="text"]
-    {
-        width: 124px;
-    }
-
-    .customerTable form select
-    {
-        width: 147px!important;
-    }
-
-    div.customer table
-    {
-        font-size: 0.8em;
-    }
-}
-
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
-    .customerTable
-    {
-        position: relative;
-        float: left;
-        height: 280px;
-    }
-
-    .customerTable .form-inline .form-group
-    {
-        padding: 0px;
         width: 100%;
     }
 
     .customerTable form input[type="text"]
     {
-        width: 60%;
+        width: 53%;
+        display: inline-block;
     }
 
     .customerTable form select
     {
-        width: 200px!important;
+        width: 45%;
+        padding: 0;
+        display: inline-block;
     }
 
-    div.customer table
+    .customerTable .form-group
     {
-        font-size: 0.8em;
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    .customer
+    {
+        height: 56.9%;
+    }
+
+    .customer .table
+    {
+        font-size: 0.9em;
     }
 }
 
-@media only screen and (min-device-width: 320px)
-    and (max-device-width: 568px)
-    and (orientation : landscape) {
-
+@media only screen and (min-device-width: 480px){
     .customerTable
     {
-        height: 230px;
-    }
-
-    .customerTable form input[type="text"]
-    {
-        width: 52%;
+        width: 100%;
     }
 }
 
-@media only screen and (min-device-width: 414px)
-    and (max-device-width: 736px)
-    and (orientation : landscape) { 
+@media only screen and (min-device-width: 768px){
     .customerTable
     {
-        position: relative;
-        float: left;
-        height: 280px;
-    }
-
-    .customerTable .form-inline .form-group
-    {
-        padding: 0px;
-        width: 100%;
-    }
-
-    .customerTable form input[type="text"]
-    {
-        width: 60%;
+        width: 90%;
     }
 }
 
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-   .customerTable .form-inline .form-group
-    {
-        padding: 0px;
-        width: 100%;
-    }
+@media only screen and (min-device-width: 992px){
+    
+}
 
-    .customerTable form input[type="text"]
-    {
-        width: 74%;
-    }
+@media only screen and (min-device-width: 1200px){
+    
 }
